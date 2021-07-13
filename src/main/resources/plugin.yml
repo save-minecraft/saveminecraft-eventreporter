@@ -1,0 +1,7 @@
+name: SaveMinecraftEventReporter
+version: ${project.version}
+main: kr.saveminecraft.plugin.eventreporter.Main
+api-version: 1.16
+authors: [ Alex4386 ]
+description: Event Reporter for Save Minecraft
+website: saveminecraft.kr
