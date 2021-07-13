@@ -59,8 +59,12 @@ public class Reporter {
 
             HttpResponse response = request.getResponse();
 
-            JSONObject json = response.toJson();
-            return (boolean) json.get("success");
+            if (response.code.isOK()) {
+                JSONObject json = response.toJson();
+                return (boolean) json.get("success");
+            } else {
+                return false;
+            }
         } catch (IOException | ParseException e) {
             return false;
         }
